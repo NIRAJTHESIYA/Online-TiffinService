@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiffin Station</title>
+
+    {% load static %}
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Tiffin Station</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="{% static "CSS [Other]/bootstrap.min.css" %}">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="{% static "CSS [Main]/style.css" %}">
+    
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{% static "CSS [Other]/responsive.css" %}">
+    <!-- font css -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{% static "CSS [Other]/jquery.mCustomScrollbar.min.css" %}">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-col first">
+                        <h6>About Website</h6>
+                        <p class="p-small">We"re more than just a tiffin service; we"re a community of food lovers who
+                            appreciate the warmth and connection that a good meal can bring.</p>
+                    </div>
+                    <!-- end of footer-col -->
+                    <div class="footer-col second">
+                        <h6>Links</h6>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li>Important: <a href="{% url "terms" %}">Terms & Conditions</a></li>
+                            <li><a href="{% url "privacy" %}">Privacy Policy</a></li>
+                            <li>Menu: <a href="{% url "index" %}">Home</a></li>
+                            <li> <a href="{% url "meal" %}">Meal</a></li>
+                            <li><a href="{% url "about" %}">About</a></li>
+                        </ul>
+                    </div>
+                    <!-- end of footer-col -->
+                    <div class="footer-col third">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <p class="p-small">Quam posuerei pellent esque vam <a
+                                href="mailto:contact@site.com"><strong>contact@site.com</strong></a></p>
+                    </div>
+                    <!-- end of footer-col -->
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of footer -->
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © <a href="{% url "index" %}">Your name</a></p>
+                </div>
+            </div>
+            <!-- enf of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+    <!-- Back To Top Button -->
+    <button onclick="topFunction()" id="myBtn">
+        <img src="{% static "images/up-arrow.png" %}" alt="alternative">
+    </button>
+    <!-- end of back to top button -->
+
+    <!-- Scripts -->
+    <script src="{% static "JS [Other]/bootstrap.min(Login).js" %}"></script>
+    <!-- Bootstrap framework -->
+    <script src="{% static "JS [Other]/swiper.min.js" %}"></script>
+    <!-- Swiper for image and text sliders -->
+    <script src="{% static "JS [Other]/purecounter.min.js" %}"></script>
+    <!-- Purecounter counter for statistics numbers -->
+    <script src="{% static "JS [Other]/replaceme.min.js" %}"></script>
+    <!-- ReplaceMe for rotating text -->
+    <script src="{% static "JS [Main]/scripts.js" %}"></script>
+    <!-- Custom scripts -->
+    <script src="{% static "JS [Other]/validate.js" %}"></script>
+    <!-- validate form script -->
+
+    <!-- Icon -->
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="" />
+    <!-- website name -->
+    <meta property="og:site" content="" />
+    <!-- website link -->
+    <meta property="og:title" content="" />
+    <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" />
+    <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" />
+
+    <meta property="og:url" content="" />
+    <!-- where do you want your post to link to -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- to have large image post format in Twitter -->
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>OTP Verification Form</title>
+    <link rel="stylesheet" href="{% static "css/otp.css" %}" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <i class="bx bxs-check-shield"></i>
+      </header>
+      <h4>Enter OTP Code</h4>
+      {% if messages %}
+                                <div class="alert alert-primary"  role="alert">
+                                    {% for message in messages %}
+                                    {{ message }}
+                                    {% endfor %}
+                                </div>
+                                <br>
+                            {% endif %}
+      <form action="{% url "verify_otp" %}" method="POST">
+        {% csrf_token %}
+        <div class="input-field">
+          <input type="text" name="otp" maxlength="6">
+        </div>
+        <input type="text" name="email" value="{{ request.GET.email }}" hidden >
+        <input type="submit">Verify OTP</input>
+      </form>
+    </div>
+  </body>
+</html>

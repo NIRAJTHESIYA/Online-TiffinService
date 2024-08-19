@@ -1,0 +1,113 @@
+{% load static %}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link rel="stylesheet" href="{% static "CSS [Main]/profile.css" %}">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+<body>
+    <div class="main-content ">
+        <!-- Top navbar -->
+        <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+            <div class="container-fluid">
+                <!-- Brand -->
+                <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block justify-content-center"
+                    href="https://www.creative-tim.com/product/argon-dashboard" target="_blank"
+                    style="font-size: 55px; font-family: 'Courier New';">
+                    <center>User profile</center>
+                </a>
+                <!-- User -->
+            </div>
+        </nav>
+        <!-- Header -->
+        <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center"
+            style="min-height: 600px; background-image: none; background-size: cover; background-position: center top;">
+            <!-- Mask -->
+            <span class="mask bg-gradient-default opacity-8"></span>
+            <!-- Header container -->
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="row">
+                    <div class="col-lg-7 col-md-10">
+                        <h1 class="display-2 text-white" style="font-family: cursive; font-size: 50px;">Hello {{request.session.first_name | title}}</h1>
+                        <p class="text-white mt-0 mb-5" style="font-family: cursive; font-size: 20px;">=> Dear user, kindly update your information and ensure it remains current. Thank you for keeping your details up-to-date!</p>
+                        <a href="{% url "update_profile" %}" class="btn btn-info">Edit profile</a>
+                        <a href="{% url "index" %}" class="btn btn-info">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page content -->
+    <div class="container-fluid mt--7">
+        <div class="row justify-content-center"> <!-- Add justify-content-center class here -->
+            <div class="col-xl-8 order-xl-1">
+                <div class="card">
+                    <div class="card-header bg-white border-0 ">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">
+                                    <center></center>
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body ">
+                        <form action="{% url "update_profile" %}">
+                            {% csrf_token %}
+                            {% if messages %}
+                            <div class="alert alert-primary" role="alert">
+                                {% for message in messages %}
+                                {{ message }}
+                                {% endfor %}
+                            </div>
+                            <br>
+                            {% endif %}
+                            <h6 class="heading-small text-muted mb-4">User information</h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-username">Username</label>
+                                            <input type="text" id="input-username"
+                                                class="form-control form-control-alternative" placeholder="Username"
+                                                value="{{request.session.first_name | title}}" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="input-email">Email
+                                                address</label>
+                                            <input type="email" id="input-email"
+                                                class="form-control form-control-alternative"
+                                                placeholder="{{request.session.email}}" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-contact">Contact no.
+                                            </label>
+                                            <input type="text" class="form-control form-control-alternative"
+                                                name="contact" {% if user.contact %} value="{{ user.contact }}" {% endif %} disabled>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group focused">
+                                            <label class="form-control-label" for="input-full-name">Joining us
+                                                from:</label>
+                                            <input type="text" id="input-full-name"
+                                                class="form-control form-control-alternative" {% if user.registration_date %} value="{{ user.registration_date|date:" D, d M Y" }}" {% endif %} disabled>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="my-4">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>

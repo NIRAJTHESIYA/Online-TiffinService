@@ -1,0 +1,82 @@
+{% include "header.html" %}
+{% load static %}
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link href="{% static "CSS [Other]/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "CSS [Other]/fontawesome-all.min.css" %}" rel="stylesheet">
+    <link href="{% static "CSS [Other]/swiper.css" %}" rel="stylesheet">
+    <link href="{% static "CSS [Main]/privacy.css" %}" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1">
+                    <div class="text-box mt-5 mb-5">
+                        <p style="text-align: center; font-weight: 800; font-size: xx-large;">Privacy Policy</p>
+
+                    </div>
+                    <!-- end of text-box -->
+
+
+                    <h2 class="mb-3"># Information Collection and Use </h2>
+                    <p>We may collect personal information from you when you use the Service, such as your name,
+                        email address, phone number, and payment information. We use this information to provide and
+                        improve the Service, to process payments, and to communicate with you about the Service.</p>
+                    <p>We may also collect non-personal information, such as your device type and IP address, for
+                        the purpose of analyzing usage patterns and improving the Service.</p>
+                    <hr>
+
+
+                    <h2 class="mb-3"># Information Sharing and Disclosure </h2>
+                    <p class="mb-5">We may share your personal information with third-party service providers that
+                        we use to process payments, provide customer support, or perform other functions related to
+                        the Service. We require these service providers to maintain the confidentiality of your
+                        information and to only use it for the purposes for which we hired them.</p>
+                    <hr>
+
+
+                    <h2 class="mb-3"># Security</h2>
+                    <p class="mb-4">We take reasonable measures to protect your personal information from
+                        unauthorized access, use, or disclosure. However, no method of transmission over the
+                        internet or electronic storage is 100% secure.</p>
+                    <hr>
+
+                    <h2 class="mb-3"># Third-Party Links and Services</h2>
+                    < p class="=mb-4">The Service may contain links to third-party websites or services. We are not
+                        responsible for the privacy practices or content of those sites or services. We encourage
+                        you to review the privacy policies of those sites or services before providing them with any
+                        of your personal information.</p>
+                        <hr>
+
+                        <h2 class="mb-3"># Contact Us</h2>
+                        <p class="mb-4">If you have any questions about this Privacy Policy, Please contact us at
+                            <a href="{% url "contact" %}" style="font-weight: 700;">Contact us</a>
+                        </p>
+                        <hr>
+
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
+
+
+    {% include "footer.html" %}
+</body>
+
+</html>

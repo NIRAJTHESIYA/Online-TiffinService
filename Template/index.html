@@ -1,0 +1,125 @@
+{% include "header.html" %}
+
+{% load static %}
+
+<body>
+
+      <!-- banner section start -->
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div id="banner_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="banner_img"><img src="{% static "images/meal4-removebg-preview.png" %}"></div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="banner_taital_main">
+                              <h5 class="banner_taital">Tasty Meal Just a Tiffin Away</h5>
+                              <p class="banner_text">Home-Style Meals Prepared in Kitchen.Kitchen Maintain High Level Of
+                                 Hygiene And Disinfect While Handling Food. </p>
+                              <div class="btn_main">
+                                 <div class="about_bt"><a href="{% url "meal" %}">Meal</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="banner_img"><img src="{% static "images/meal2-removebg-preview.png" %}"></div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="banner_taital_main">
+                              <h1 class="banner_taital">Tasty Meal Just a Tiffin Away</h1>
+                              <p class="banner_text">We believe that food should not only satisfy hunger but also
+                                 nourish tha soul. </p>
+                              <div class="btn_main">
+                                 <div class="about_bt"><a href="{% url "meal" %}">Meal</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <div class="banner_img"><img src="{% static "images/meal1-removebg-preview.png" %}"></div>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="banner_taital_main">
+                              <h1 class="banner_taital">Tasty Meal Just a Tiffin Away</h1>
+                              <p class="banner_text">Every meal is prepared with the same love and attention as if it
+                                 were made in your own kitchen. </p>
+                              <div class="btn_main">
+                                 <div class="about_bt"><a href="{% url "meal" %}">Meal</a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#banner_slider" role="button" data-slide="prev">
+                  <i class="fa fa-arrow-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#banner_slider" role="button" data-slide="next">
+                  <i class="fa fa-arrow-right"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- banner section end -->
+
+   <!-- coffee section start -->
+   <div class="coffee_section layout_padding">
+      <div class="container">
+         <div class="row">
+            <h1 class="coffee_taital">Meal Plans</h1>
+            <div class="bulit_icon"><img src="{% static "images/bulit-icon.png" %}"></div>
+         </div>
+      </div>
+      <div class="coffee_section_2">
+         <div id="main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container-fluid">
+                     <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                           <div class="coffee_img"><img src="{% static "images/own.png" %}"></div>
+                           <h3 class="types_text">Make your own Meal</h3>
+                           <p class="looking_text">For More Information Select Read More...</p>
+                           <div class="read_bt"><a href="{% url "meal" %}">Read More</a></div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="coffee_img"><img src="{% static "images/Regular-removebg-preview.png" %}"></div>
+                           <h3 class="types_text">Regular Meal</h3>
+                           <p class="looking_text">For More Information Select Read More...</p>
+                           <div class="read_bt"><a href="{% url "meal" %}">Read More</a></div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="coffee_img"><img src="{% static "images/mini meal.png" %}"></div>
+                           <h3 class="types_text">Mini Meal</h3>
+                           <p class="looking_text">For More Information Select Read More...</p>
+                           <div class="read_bt"><a href="{% url "meal" %}">Read More</a></div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="coffee_img"><img src="{% static "images/Full ,meal.png" %}"></div>
+                           <h3 class="types_text">Full Meal</h3>
+                           <p class="looking_text">For More Information Select Read More...</p>
+                           <div class="read_bt"><a href="{% url "meal" %}">Read More</a></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   {% include "footer.html" %}
+
+
+</body>
+
+</html>

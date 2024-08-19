@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiffin Station</title>
+
+    {% load static %}
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Tiffin Station</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="{% static "CSS [Other]/bootstrap.min.css" %}">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="{% static "CSS [Main]/style.css" %}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{% static "CSS [Other]/responsive.css" %}">
+    <!-- font css -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{% static "CSS [Other]/jquery.mCustomScrollbar.min.css" %}">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+    <style>
+      .dropdown-menu {
+    background-color: #fff; /* Change background color if needed */
+}
+
+.dropdown-menu a {
+    color: #000; /* Change text color if needed */
+}
+
+.dropdown-menu a:hover {
+    background-color: #f8f9fa; /* Change background color on hover if needed */
+}
+
+    </style>
+
+</head>
+
+<body>
+  <!-- header section start -->
+   <div class="header_section">
+      <div class="container-fluid">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{% url "index" %}" style="max-width: 10%; padding-top: 0%;"><img
+                  src="{% static "images/logo.png" %}"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style=" margin-right: 3%;">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="{% url "index" %}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url "meal" %}">Meal</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url "about" %}">About</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="{% url "contact" %}">Contact</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     {% if request.session.login == True %}
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="true">
+                           {{ request.session.first_name | title}}
+                        </a>
+                        
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                           <a class="dropdown-item" href="{% url "profile" %}"><center>Profile</center></a>
+                           <a class="dropdown-item" href="{% url "logout" %}"><center>Logout</center></a>
+                        {% else %}                          
+                           <a class="dropdown-item btn-outline-sm btn-login {% if request.path == 'login' %}active{% endif %}"  href="{% url 'login' %}" ><center>Login</center></a>
+                        {% endif %}
+                        </div>
+                     </li>
+
+
+                  {% comment %} {% if request.session.login == True %}
+                  <li class="nav-item">
+                     <a class="nav-link"  href="{% url "index" %}">
+                        <span class="btn-outline-sm {% if request.path == '/' %}active{% endif %}">{{ request.session.first_name | title}}</span>
+                     </a>
+                     <li class="nav-item">
+                     <a class="nav-link" href="{% url "logout" %}">
+                        <span class="   {% if request.path == '/' %}active{% endif %}">Log Out</span>
+                     </a>
+                  {% else %}
+                <li class="nav-item">
+                     <a class="nav-link" href="{% url 'login' %}">
+                        <span  class="btn-outline-sm btn-login {% if request.path == 'login' %}active{% endif %}">Login</span>
+                     </a>
+                {% endif %} {% endcomment %}
+                  {% comment %} </li> {% endcomment %}
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </div>
+   <!-- header section end -->
+
+    <!-- Javascript files -->
+    <script src="{% static "JS [Other]/jquery.min.js" %}"></script>
+    <script src="{% static "JS [Other]/popper.min.js" %}"></script>
+    <script src="{% static "JS [Other]/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "JS [Other]/jquery-3.0.0.min.js" %}"></script>
+    <script src="{% static "JS [Other]/plugin.js" %}"></script>
+    <!-- sidebar -->
+    <script src="{% static "JS [Other]/jquery.mCustomScrollbar.concat.min.js" %}"></script>
+    <script src="{% static "JS [Main]/header.js" %}"></script>
+    <script src="{% static "JS [Main]/script.js" %}"></script>
+
+</body>
+
+</html>

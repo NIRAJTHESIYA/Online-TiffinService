@@ -1,0 +1,49 @@
+{% include "header.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="{% static 'CSS [Main]/menu.css' %}" rel="stylesheet">
+    <link href="{% static 'CSS [Main]/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="dropdown-container">
+        <div class="dropdown-container">
+        {% for day in days %}
+        <div class="dropdown" onclick="toggleDropdown(this)">
+            <button class="dropdown-btn"><input type="checkbox" name="date" value="{{ day.id }}" onchange="fetchMenu({{ day.id }})"> <span class="dropdown-text">{{ day.day }}-{{ day.month.name }} ({{ day.day|date:"l" }})</span><span class="arrow">&#9662;</span></button>
+            <div class="dropdown-content">
+                {% if selected_date == day.id|stringformat:"s" %}
+                    {% for menu_item in menu_items %}
+                    <div class="checkbox-container">
+                        <label>{{ menu_item.menu_item.name }} ({{ menu_item.quantity }})</label>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+        
+    <script>
+        function toggleDropdown(dropdown) {
+            dropdown.classList.toggle('active');
+        }
+
+        function fetchMenu(dayId) {
+            window.location.href = `?date=${dayId}`;
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+{% include "header.html" %}
+{% load static %}
+<head>
+   <link rel="stylesheet" type="text/css" href="{% static "CSS [Main]/meal.css" %}">
+   <!-- Responsive-->
+
+   <style>
+      .btn-primary {
+         margin-bottom: 5px;
+      }
+   </style>
+
+</head>
+
+<body>
+
+
+      <!-- Cards Section -->
+      <div class="container">
+         <div class="row">
+            <!-- First Card -->
+            <div class="col-md-6 col-lg-4">
+               <div class="card custom-card">
+                  <img src="{% static "images/Regular-removebg-preview.png" %}" class="card-img-top" alt="...">
+                  <div class="card-body card-text-body">
+                     <h5 class="card-title">Regular Meal</h5>
+                     <p class="card-text">1 Vegetable, 1 Dal, 3 Chapati, 1 Salad/Soup1 Vegetable</p>
+                     <p class="price" style="font-weight:bold; font-family: cursive;">₹120 (*Delivery Charge
+                        Applicable)</p>
+                  </div>
+
+                  <ul class="list-group list-group-flush">
+                     <li class="list-group-item">
+                        <div class="card-text">
+                           <span>3 Days</span>
+                           <span class="card-pricing" style="margin-left: 200px;"><del>₹500</del></span><br>
+                           <span class=" border border-success p-0.5 border-opacity rounded px-1"
+                              style="background-color: bisque;"> 5%
+                              off </span>
+                           <span class="card-pricing" style="margin-left: 200px;">₹500</span>
+                        </div>
+                     </li>
+                     <li class="list-group-item">
+                        <div class="card-text">
+                           <span>1 Week</span>
+                           <span class="card-pricing" style="margin-left: 200px;"><del>₹500</del></span><br>
+                           <span class=" border border-success p-0.5 border-opacity rounded px-1"
+                              style="background-color: bisque;"> 5%
+                              off </span>
+                           <span class="card-pricing" style="margin-left: 200px;">₹500</span>
+                        </div>
+                     </li>
+                     <li class="list-group-item">
+                        <div class="card-text">
+                           <span>1 Month</span>
+                           <span class="card-pricing" style="margin-left: 200px;"><del>₹500</del></span><br>
+                           <span class=" border border-success p-0.5 border-opacity rounded px-1"
+                              style="background-color: bisque;"> 5%
+                              off </span>
+                           <span class="card-pricing" style="margin-left: 200px;">₹500</span>
+                        </div>
+                     </li>
+                  </ul>
+
+
+                  <div class="card-body">
+                     <center><a href="{% url "menu" %}" class="btn btn-primary" style="background-color: #008000"; margin-bottom: "5px";>View Menu</a>
+                     </center>
+                     <center><a href="#" class="btn btn-primary">Order Now</a></center>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Second Card -->
+            <div class="col-md-6 col-lg-4">
+               <div class="card custom-card">
+                  <img src="{% static "images/Regular-removebg-preview.png" %}" class="card-img-top" alt="...">
+                  <div class="card-body card-text-body">
+                     <h5 class="card-title">Mini Meal</h5>
+                     <p class="card-text">1 Vegetable, 1 Dal, 3 Chapati, 1 Salad/Soup1 Vegetable</p>
+                     <p class="price" style="font-weight:bold; font-family: cursive;">₹120 (*Delivery Charge Applicable)
+                     </p>
+                  </div>
+
+                  <ul class="list-group list-group-flush">
+                     <li class="list-group-item">
+                        <div class="card-text">
+                           <span>3 Days</span>
+                           <span class="card-pricing" style="margin-left: 200px;"><del>₹500</del></span><br>
+                           <span class=" border border-success p-0.5 border-opacity rounded px-1"
+                              style="background-color: bisque;">5% off</span>
+                           <span class="card-pricing" style="margin-left: 200px;">₹500</span>
+                        </div>
+                     </li>
+                     <li class="list-group-item">
+                        <div class="card-text">
+                           <span>1 Week</span>
+                           <span class="card-pricing" style="margin-left: 200px;"><del>₹500</del></span><br>
+                           <span class=" border border-success p-0.5 border-opacity rounded px-1"
+                              style="background-color: bisque;">5% off</span>
+                           <span class="card-pricing" style="margin-left: 200px;">₹500</span>
+                        </div>
+                     </li>
+                     <li class="list-group-item">
+                        <div class="card-text">
+                           <span>1 Month</span>
+                           <span class="card-pricing" style="margin-left: 200px;"><del>₹500</del></span><br>
+                           <span class=" border border-success p-0.5 border-opacity rounded px-1"
+                              style="background-color: bisque;">5% off</span>
+                           <span class="card-pricing" style="margin-left: 200px;">₹500</span>
+                        </div>
+                     </li>
+                  </ul>
+
+                  <div class="card-body">
+                     <center><a href="{% url "menu" %}" class="btn btn-primary" style="background-color: #008000">View Menu</a>
+                     </center>
+                     <center><a href="#" class="btn btn-primary">Order Now</a></center>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Third Card -->
+            <div class="col-md-6 col-lg-4">
+               <div class="card custom-card">
+                  <img src="{% static "images/Full ,meal.png" %}" class="card-img-top" alt="...">
+                  <div class="card-body card-text-body">
+                     <h5 class="card-title">Full Meal</h5>
+                     <p class="card-text">1 Vegetable, 1 Dal, 3 Chapati, 1 Salad/Soup1 Vegetable</p>
+                     <p class="price" style="font-weight:bold; font-family: cursive;">₹120 (*Delivery Charge Applicable)
+                     </p>
+                  </div>
+
+                  <ul class="list-group list-group-flush">
+                     <li class="list-group-item">
+                        <div class="card-text">
+                           <span>3 Days</span>
+                           <span class="card-pricing" style="margin-left: 200px;"><del>₹500</del></span><br>
+                           <span class=" border border-success p-0.5 border-opacity rounded px-1"
+                              style="background-color: bisque;"> 5%
+                              off </span>
+                           <span class="card-pricing" style="margin-left: 200px;">₹500</span>
+                        </div>
+                     </li>
+                     <li class="list-group-item">
+                        <div class="card-text">
+                           <span>1 Week</span>
+                           <span class="card-pricing" style="margin-left: 200px;"><del>₹500</del></span><br>
+                           <span class=" border border-success p-0.5 border-opacity rounded px-1"
+                              style="background-color: bisque;"> 5%
+                              off </span>
+                           <span class="card-pricing" style="margin-left: 200px;">₹500</span>
+                        </div>
+                     </li>
+                     <li class="list-group-item">
+                        <div class="card-text">
+                           <span>1 Month</span>
+                           <span class="card-pricing" style="margin-left: 200px;"><del>₹500</del></span><br>
+                           <span class=" border border-success p-0.5 border-opacity rounded px-1"
+                              style="background-color: bisque;"> 5%
+                              off </span>
+                           <span class="card-pricing" style="margin-left: 200px;">₹500</span>
+                        </div>
+                     </li>
+                  </ul>
+
+
+                  <div class="card-body">
+                     <center><a href="{% url "menu" %}" class="btn btn-primary" style="background-color: #008000" mar>View Menu</a>
+                     </center>
+                     <center><a href="#" class="btn btn-primary">Order Now</a></center>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Bootstrap JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+     
+      {% include "footer.html" %}
+</body>
+
+</html>
